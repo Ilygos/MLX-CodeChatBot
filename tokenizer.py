@@ -54,8 +54,31 @@ previousText = ''
 
 # Define a list of Regex Pattern that should be colored in a certain way
 repl = [
+    # Python keywords
     ['(^| )(False|None|True|and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield)($| )', keywords],
+    # Python strings
     ['".*?"', string],
     ['\'.*?\'', string],
+    # Python comments
     ['#.*?$', comments],
+
+    # C, C++, C#, and Java keywords
+    ['(^| )(auto|break|case|char|const|continue|default|do|double|else|enum|explicit|export|extern|float|for|friend|goto|if|inline|int|long|namespace|register|reinterpret_cast|short|signed|sizeof|static|static_assert|static_cast|struct|switch|template|this|thread_local|throw|try|typedef|typeid|typename|union|unsigned|using|virtual|void|volatile|wchar_t|while)($| )', keywords],
+    # C, C++, C#, and Java strings
+    ['L?".*?"', string],  # C++ and C# raw string literals
+    ['bR?".*?"', string],  # C++ binary and raw string literals
+    ['br?".*?"', string],  # C++ binary and raw string literals
+    ['B?".*?"', string],  # C++ binary string literals
+    ['b?".*?"', string],  # C++ binary string literals
+    ['R?".*?"', string],  # C++ and C# raw string literals
+    ['r?".*?"', string],  # C++ and C# raw string literals
+    ['u8?".*?"', string],  # C++ and C# UTF-8 string literals
+    ['u?".*?"', string],  # C++ and C# Unicode string literals
+    ['U?".*?"', string],  # C++ and C# wide Unicode string literals
+    ['".*?"', string],
+    ['\'.*?\'', string],
+    # C, C++, C#, and Java single-line comments
+    ['//.*?$', comments],
+    # C and C++ multi-line comments
+    [r'/\*.*?\*/', comments],  # Use a raw string for the pattern
 ]
