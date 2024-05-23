@@ -63,7 +63,7 @@ repl = [
     ['#.*?$', comments],
 
     # C, C++, C#, and Java keywords
-    ['(^| )(auto|break|case|char|const|continue|default|do|double|else|enum|explicit|export|extern|float|for|friend|goto|if|inline|int|long|namespace|register|reinterpret_cast|short|signed|sizeof|static|static_assert|static_cast|struct|switch|template|this|thread_local|throw|try|typedef|typeid|typename|union|unsigned|using|virtual|void|volatile|wchar_t|while)($| )', keywords],
+    ['(^| )(private|public|auto|break|case|char|const|continue|default|do|double|else|enum|explicit|export|extern|float|for|friend|goto|if|inline|int|long|namespace|register|reinterpret_cast|short|signed|sizeof|static|static_assert|static_cast|struct|switch|template|this|thread_local|throw|try|typedef|typeid|typename|union|unsigned|using|virtual|void|volatile|wchar_t|while)($| )', keywords],
     # C, C++, C#, and Java strings
     ['L?".*?"', string],  # C++ and C# raw string literals
     ['bR?".*?"', string],  # C++ binary and raw string literals
